@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vineeth 💖 Ayana</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffdde1, #ee9ca7);
+    color: #fff;
+    text-align: center;
+}
+
+section {
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: #ff1e4d;
+}
+
+.card {
+    background: rgba(255,255,255,0.2);
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    max-width: 300px;
+}
+
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: #ff4d6d;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="hearts"></div>
+
+<section>
+    <h1>Hey Vineeth ❤️</h1>
+    <p>I made something special just for you…</p>
+    <button onclick="scrollToSection(1)">Start Our Story 💕</button>
+</section>
+
+<section>
+    <h2>How We Met 💫</h2>
+    <div class="card">
+        The day I met you,<br>
+        I didn’t know you’d become<br>
+        my favorite person.
+    </div>
+</section>
+
+<section>
+    <h2>Why I Love You 💖</h2>
+    <div class="card">You make me smile without trying 😊</div>
+    <div class="card">You feel like home 🏡</div>
+    <div class="card">You always support me 🤍</div>
+</section>
+
+<section>
+    <h2>A Letter From Shuttu 💌</h2>
+    <div class="card">
+        Vineeth,<br><br>
+        Loving you is my favorite thing.<br>
+        No matter what happens,<br>
+        I choose you. Always.
+    </div>
+</section>
+
+<section>
+    <h2>So… 💍</h2>
+    <h1>Will you be my Valentine?</h1>
+    <button onclick="yesClicked()">YES ❤️</button>
+    <button onclick="yesClicked()">OF COURSE 😘</button>
+</section>
+
+<section id="end">
+    <h1>Happy Valentine’s Day 💘</h1>
+    <p>This website is temporary…<br>But my love for you isn’t ♾️</p>
+    <h2>— Shuttu 💕</h2>
+</section>
+
+<script>
+function scrollToSection(index) {
+    document.querySelectorAll("section")[index].scrollIntoView({behavior: "smooth"});
+}
+
+function yesClicked() {
+    document.getElementById("end").scrollIntoView({behavior: "smooth"});
+    alert("YAY!!! I love you Vineeth ❤️");
+}
+
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    document.querySelector(".hearts").appendChild(heart);
+    setTimeout(() => heart.remove(), 5000);
+}
+
+setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
