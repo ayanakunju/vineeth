@@ -72,26 +72,36 @@ button:hover {
     0% { transform: translateY(100vh); opacity: 1; }
     100% { transform: translateY(-10vh); opacity: 0; }
 }
+
+/* Hide YouTube video */
+.youtube-audio {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
 </style>
 </head>
 
 <body>
 
-<!-- Background Music -->
-<audio autoplay loop>
-  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-</audio>
+<!-- 🎵 Ambili Song (Audio Feel via YouTube) -->
+<div class="youtube-audio">
+<iframe 
+  src="https://www.youtube.com/embed/7n8cY8V0yYI?autoplay=1&loop=1&playlist=7n8cY8V0yYI"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+</div>
 
 <div class="hearts"></div>
 
-<!-- Section 1 -->
 <section>
     <h1>Hey Vineeth ❤️</h1>
     <p>I made something special just for you…</p>
     <button onclick="scrollToSection(1)">Start Our Story 💕</button>
+    <p style="font-size:12px;opacity:0.8;">(Tap once to start music 🎶)</p>
 </section>
 
-<!-- Section 2: Story -->
 <section>
     <h2>The Day We Met 💫</h2>
     <div class="card">
@@ -130,7 +140,6 @@ button:hover {
     </div>
 </section>
 
-<!-- Section 3 -->
 <section>
     <h2>Why I Love You 💖</h2>
     <div class="card">You make me smile without trying 😊</div>
@@ -138,7 +147,6 @@ button:hover {
     <div class="card">You are my safe place 🤍</div>
 </section>
 
-<!-- Section 4 -->
 <section>
     <h2>So… 💍</h2>
     <h1>Will you be my Valentine?</h1>
@@ -146,7 +154,6 @@ button:hover {
     <button onclick="yesClicked()">ALWAYS 😘</button>
 </section>
 
-<!-- Section 5 -->
 <section id="end">
     <h1>Forever Us ♾️</h1>
     <p>This website is temporary…<br>but my love for you is forever ❤️</p>
