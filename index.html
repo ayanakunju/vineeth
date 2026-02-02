@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Vineeth 💖 Ayana</title>
+<title>Vineeth 💖 Kunju</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -30,14 +30,14 @@ h1, h2 {
 }
 
 button {
-    padding: 12px 24px;
+    padding: 12px 26px;
     border: none;
     border-radius: 30px;
     background: #ff4d6d;
     color: white;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 20px;
+    margin: 10px;
 }
 
 button:hover {
@@ -45,11 +45,12 @@ button:hover {
 }
 
 .card {
-    background: rgba(255,255,255,0.2);
-    padding: 20px;
+    background: rgba(255,255,255,0.25);
+    padding: 22px;
     border-radius: 20px;
-    margin: 10px;
-    max-width: 300px;
+    margin: 12px;
+    max-width: 340px;
+    line-height: 1.6;
 }
 
 .hearts {
@@ -63,8 +64,8 @@ button:hover {
 
 .heart {
     position: absolute;
-    color: #ff4d6d;
     animation: float 5s linear infinite;
+    opacity: 0.9;
 }
 
 @keyframes float {
@@ -76,56 +77,80 @@ button:hover {
 
 <body>
 
-<!-- Music -->
+<!-- Background Music -->
 <audio autoplay loop>
   <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
 </audio>
 
 <div class="hearts"></div>
 
+<!-- Section 1 -->
 <section>
     <h1>Hey Vineeth ❤️</h1>
     <p>I made something special just for you…</p>
     <button onclick="scrollToSection(1)">Start Our Story 💕</button>
 </section>
 
+<!-- Section 2: Story -->
 <section>
-    <h2>How We Met 💫</h2>
+    <h2>The Day We Met 💫</h2>
     <div class="card">
-        The day I met you,<br>
-        I didn’t know you’d become<br>
-        my favorite person.
+        Valentine’s Day — <b>Feb 14, 2022</b> 💖<br><br>
+
+        It was a simple game… a silly dare.<br>
+        A Valentine’s Day game where you had to propose<br>
+        a girl from the crowd.<br><br>
+
+        And somehow, out of everyone there,<br>
+        <b>you chose me.</b><br><br>
+
+        You proposed using the <i>Hridayam</i> movie scene 🥹<br>
+        I felt shy, awkward, confused…<br>
+        I didn’t even understand that feeling.<br><br>
+
+        So I laughed.<br>
+        Hiding everything behind a mask 😌<br><br>
+
+        Two days later, you messaged me…<br>
+        just to say <b>sorry</b>.<br><br>
+
+        And unknowingly,<br>
+        that message became the beginning of <b>us</b> ❤️<br><br>
+
+        From a senior I once knew…<br>
+        to my forever, <b>Vineeth ettan</b> ♾️🤍<br><br>
+
+        It’s been <b>4 beautiful years</b>,<br>
+        and now we’ve stepped into our <b>5th year together</b> 💕<br><br>
+
+        Happy Valentine’s Day, my love 💘<br>
+        Happy Anniversary to us 🤍<br><br>
+
+        — Kunju 🤍
     </div>
 </section>
 
+<!-- Section 3 -->
 <section>
     <h2>Why I Love You 💖</h2>
     <div class="card">You make me smile without trying 😊</div>
     <div class="card">You feel like home 🏡</div>
-    <div class="card">You always support me 🤍</div>
+    <div class="card">You are my safe place 🤍</div>
 </section>
 
-<section>
-    <h2>A Letter From Shuttu 💌</h2>
-    <div class="card">
-        Vineeth,<br><br>
-        Loving you is my favorite thing.<br>
-        No matter what happens,<br>
-        I choose you. Always.
-    </div>
-</section>
-
+<!-- Section 4 -->
 <section>
     <h2>So… 💍</h2>
     <h1>Will you be my Valentine?</h1>
     <button onclick="yesClicked()">YES ❤️</button>
-    <button onclick="yesClicked()">OF COURSE 😘</button>
+    <button onclick="yesClicked()">ALWAYS 😘</button>
 </section>
 
+<!-- Section 5 -->
 <section id="end">
-    <h1>Happy Valentine’s Day 💘</h1>
-    <p>This website is temporary…<br>But my love for you isn’t ♾️</p>
-    <h2>— Shuttu 💕</h2>
+    <h1>Forever Us ♾️</h1>
+    <p>This website is temporary…<br>but my love for you is forever ❤️</p>
+    <h2>— Kunju 🤍</h2>
 </section>
 
 <script>
@@ -135,7 +160,7 @@ function scrollToSection(index) {
 
 function yesClicked() {
     document.getElementById("end").scrollIntoView({behavior: "smooth"});
-    alert("YAY!!! I love you Vineeth ❤️");
+    alert("I love you, Vineeth ettan ❤️");
 }
 
 function createHeart() {
@@ -143,7 +168,7 @@ function createHeart() {
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    heart.style.fontSize = Math.random() * 18 + 18 + "px";
     document.querySelector(".hearts").appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
 }
